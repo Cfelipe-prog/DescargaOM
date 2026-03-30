@@ -1,0 +1,266 @@
+:root {
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  color: #f7f3ea;
+  background:
+    radial-gradient(circle at top left, rgba(245, 160, 66, 0.28), transparent 32%),
+    linear-gradient(145deg, #12233b 0%, #0b1626 55%, #09111b 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.4rem;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-card,
+.panel {
+  backdrop-filter: blur(12px);
+  background: rgba(7, 17, 30, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #f5a042;
+  font-size: 0.8rem;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.lede {
+  max-width: 60ch;
+  color: rgba(247, 243, 234, 0.82);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-stats article,
+.item-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 2rem;
+}
+
+.hero-stats span,
+.item-status,
+.batch-meta span {
+  color: rgba(247, 243, 234, 0.65);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 1.5rem;
+}
+
+.panel {
+  padding: 1.5rem;
+}
+
+.form-grid,
+.items-list {
+  display: grid;
+  gap: 1rem;
+}
+
+label span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+}
+
+textarea,
+input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 0.9rem 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #08101a;
+  background: linear-gradient(135deg, #f5a042, #ffd47c);
+}
+
+.secondary-btn {
+  color: #f7f3ea;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.error-box {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(217, 67, 67, 0.2);
+  border: 1px solid rgba(217, 67, 67, 0.35);
+}
+
+.empty-state {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: rgba(247, 243, 234, 0.72);
+}
+
+.batch-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.download-all-row {
+  margin-bottom: 1rem;
+}
+
+.batch-meta strong {
+  display: block;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.item-card.running {
+  border-color: rgba(245, 160, 66, 0.5);
+}
+
+.item-card.completed {
+  border-color: rgba(94, 201, 122, 0.55);
+}
+
+.item-card.failed {
+  border-color: rgba(217, 67, 67, 0.55);
+}
+
+.item-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.item-detail {
+  display: grid;
+  gap: 0.45rem;
+  justify-items: end;
+  text-align: right;
+}
+
+a {
+  color: #ffd47c;
+}
+
+@media (max-width: 900px) {
+  .page-shell {
+    padding: 1rem;
+  }
+
+  .hero-card,
+  .grid,
+  .two-col,
+  .batch-meta,
+  .item-card {
+    grid-template-columns: 1fr;
+  }
+
+  .item-detail {
+    justify-items: start;
+    text-align: left;
+  }
+}
