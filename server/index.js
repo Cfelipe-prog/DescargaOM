@@ -101,8 +101,8 @@ app.get('*', (req, res, next) => {
   res.sendFile(path.join(distDir, 'index.html'));
 });
 
-const port = Number(process.env.PORT || 3001);
+const port = Number(process.env.PORT || 3000);
 
-app.listen(port, () => {
-  console.log(`Servidor listo en http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Servidor listo en http://0.0.0.0:${port}`);
 });
